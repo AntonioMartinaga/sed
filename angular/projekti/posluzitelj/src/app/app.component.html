@@ -1,0 +1,28 @@
+<header>
+    <nav>
+      <ul>
+        <a *ngIf="korisnik" routerLink="/">Početna</a>
+        <a *ngIf="!korisnik" routerLink="/prijava">Prijava</a>
+        <a *ngIf="!korisnik" routerLink="/registracija">Registracija</a>
+        <a *ngIf="korisnik" routerLink="/osobe">Osobe</a>
+        <a *ngIf="korisnik && korisnik.pristup === 1" routerLink="/korisnici">Korisnici</a>
+        <a *ngIf="korisnik && korisnik.pristup === 1" routerLink="/dodavanje">Dodavanje</a>
+        <a routerLink="/dokumentacija">Dokumentacija</a>
+        <a *ngIf="korisnik" routerLink="/odjava" (click)="odjava()">Odjava</a>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    <p> CC BY-NC-SA 4.0
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+        <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+        <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+        <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+        <img class="cc-icon" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+      </a>
+      2025. Izradio: Antonio Martinaga
+    </p> 
+  </footer>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="HR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentacija</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dokumentacija</h1>
+    <div class="image-container">
+        <img src="/dok/x-ica.jpg" width="300" height="400" alt="Slika autora">
+    </div>
+    <p><strong>Ime i prezime:</strong> Antonio Martinaga</p>
+    <p><strong>FOI Email:</strong> amartinag22 student.foi.hr</p>
+
+    <h2>ERA Modeli</h2>
+    <div class="image-container">
+        <a href="/dok/baza1.png" target="_blank">
+            <img src="./baza1.png" alt="ERA Model 1">
+        </a><br/>
+        <a href="/dok/baza2.png" target="_blank">
+            <img src="./baza2.png" alt="ERA Model 2">
+        </a>
+    </div>
+
+    <h2>Tablica 2 - Pregled resursa, metoda i parametara REST servisa</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Resurs/Parametri</th>
+                <th>GET</th>
+                <th>POST</th>
+                <th>PUT</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>servis/korisnici</td>
+                <td></td>
+                <td>Napravljeno</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>servis/korisnici/{{ '{' }}korime{{ '}' }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>servis/osoba?stranica=broj</td>
+                <td>Napravljeno</td>
+                <td>Napravljeno</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>servis/osoba/{{ '{' }}id{{ '}' }}</td>
+                <td>Napravljeno</td>
+                <td></td>
+                <td></td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>servis/osoba/{{ '{' }}id{{ '}' }}/film?stranica=broj</td>
+                <td>Napravljeno</td>
+                <td></td>
+                <td>Napravljeno</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>servis/film?stranica=broj&[datumOd=timestamp&datumDo=timestamp]</td>
+                <td>Napravljeno (ne radi datum)</td>
+                <td>Napravljeno (ne radi datum)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>servis/film/{{ '{' }}id{{ '}' }}</td>
+                <td>Napravljeno</td>
+                <td></td>
+                <td></td>
+                <td>Napravljeno</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Tablica 3 - Pregled funkcionalnosti Web aplikacije</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Uloga</th>
+                <th>Stranica/e</th>
+                <th>Opis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gost</td>
+                <td>Početna</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Gost</td>
+                <td>Dokumentacija</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Gost</td>
+                <td>Prijava, Odjava</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Gost</td>
+                <td>Registracija</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Korisnik</td>
+                <td>Početna</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Korisnik</td>
+                <td>Osobe</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Korisnik</td>
+                <td>Detalji</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>Korisnici</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>Admin</td>
+                <td>Dodavanje</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Zadaća 2</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Zadatak</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Nije u potpunosti napravljeno</td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>11.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>12.</td>
+                <td>Nije napravljeno</td>
+            </tr>
+            <tr>
+                <td>13.</td>
+                <td>Nije napravljeno</td>
+            </tr>
+            <tr>
+                <td>14.</td>
+                <td>Nije napravljeno</td>
+            </tr>
+            <tr>
+                <td>15.</td>
+                <td>Napravljeno</td>
+            </tr>
+            <tr>
+                <td>16.</td>
+                <td>Nije napravljeno</td>
+            </tr>
+            <tr>
+                <td>17.</td>
+                <td>Nije napravljeno</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

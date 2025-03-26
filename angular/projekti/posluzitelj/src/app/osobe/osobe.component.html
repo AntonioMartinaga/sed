@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="pagination-controls">
+      <label for="poStranici">Broj osoba po stranici:</label>
+      <select id="poStranici" (change)="postaviPoStranici($event)">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+  
+    <div class="osobe-list">
+      <div *ngFor="let osoba of prikaziOsobe()" class="osoba">
+        <img [src]="osoba.profilna_slika ? profilnaSlikaOsobePutanja + osoba.profilna_slika : '/img/image_not_found.jpg'" (click)="pregledDetaljaOsobe(osoba.id)">
+        <p>{{ osoba.ime_i_prezime }}</p>
+        <p>Poznat po: {{ osoba.poznat_po }}</p>
+      </div>
+    </div>
+  
+    <div class="pagination-buttons">
+      <button (click)="prvaStranica()" [disabled]="stranica === 1">Prva</button>
+      <button (click)="preusmjeriNaStranicu(stranica - 1)" [disabled]="stranica === 1">Prethodna</button>
+      <span>Stranica {{ stranica }} od {{ ukupnoStranica }}</span>
+      <button (click)="preusmjeriNaStranicu(stranica + 1)" [disabled]="stranica === ukupnoStranica">Sljedeća</button>
+      <button (click)="zadnjaStranica()" [disabled]="stranica === ukupnoStranica">Zadnja</button>
+    </div>
+  </div>

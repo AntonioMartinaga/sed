@@ -1,0 +1,59 @@
+body {
+    min-height: 72vh;
+  }
+  
+  .login-card {
+    max-width: 400px;
+    margin: 6rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .login-info-card {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  
+  button {
+    display: block;
+    margin: 2rem auto;
+  }
+  
+  mat-error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  mat-card-header {
+    text-align: center;
+  }
+  
+  mat-card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120%;
+  }
+  
+  mat-card-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120%;
+    padding-bottom: 20px;
+    color: #ff6600;
+  }

@@ -1,0 +1,46 @@
+<div *ngIf="osoba">
+    <h2>{{ osoba.ime_i_prezime }}</h2>
+    <img [src]="osoba.profilna_slika ? 'https://image.tmdb.org/t/p/w200' + osoba.profilna_slika : '/img/image_not_found.jpg'" alt="Profilna Slika">
+    <p>Popularnost: {{ osoba.popularnost }}</p>
+  
+    <div id="galerijaSlika">
+      <h3>Galerija Slika</h3>
+      <div class="slike-container">
+        <img *ngFor="let slika of galerija" [src]="'https://image.tmdb.org/t/p/w200' + slika.slika" alt="Galerija Slika" class="galerija-slika">
+      </div>
+    </div>
+  
+    <div id="filmovi">
+      <h3>Filmovi</h3>
+      <table id="filmoviTabela">
+        <thead>
+          <tr>
+            <th>Jezik</th>
+            <th>Naslov</th>
+            <th>Originalni Naslov</th>
+            <th>Popularnost</th>
+            <th>Poster</th>
+            <th>Datum Izdavanja</th>
+            <th>Lik</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let film of filmovi">
+            <td>{{ film.jezik }}</td>
+            <td class="naslov" (mouseenter)="showTooltip($event, film.opis_filma)" (mouseleave)="hideTooltip()">{{ film.orginalni_naslov }}</td>
+            <td>{{ film.naslov }}</td>
+            <td>{{ film.popularnost }}</td>
+            <td><img [src]="film.slikica_postera ? slikicaPosteraFilmaPutanja + film.slikica_postera : '/img/image_not_found.jpg'" alt="Poster" class="poster-slika"></td>
+            <td>{{ formatDatum(film.datum_izdavanja) }}</td>
+            <td>{{ film.lik }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="gumb-container">
+        <button id="ucitajJosFilmova" (click)="ucitajJosFilmova()">Učitaj još filmova</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!osoba">
+    <p>Osoba nije pronađena.</p>
+  </div>

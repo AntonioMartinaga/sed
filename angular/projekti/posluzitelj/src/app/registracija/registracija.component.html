@@ -1,0 +1,46 @@
+<body>
+    <mat-card class="register-card">
+      <mat-card-header>
+        <mat-card-title>Registracija</mat-card-title>
+        <mat-card-subtitle>Molimo popunite sve podatke</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="onSubmit(registracijaForm)" #registracijaForm="ngForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Ime</mat-label>
+            <input matInput name="ime" type="text" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Prezime</mat-label>
+            <input matInput name="prezime" type="text" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Korisničko ime</mat-label>
+            <input matInput name="korime" type="text" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput name="email" type="email" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Lozinka</mat-label>
+            <input matInput name="lozinka" type="password" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Adresa</mat-label>
+            <input matInput name="adresa" type="text" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Grad</mat-label>
+            <input matInput name="grad" type="text" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Poštanski broj</mat-label>
+            <input matInput name="postanskiBroj" type="text" ngModel required>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Registriraj me</button>
+        </form>
+        <mat-error *ngIf="errorPoruka">{{ errorPoruka }}</mat-error>
+      </mat-card-content>
+    </mat-card>
+  </body>

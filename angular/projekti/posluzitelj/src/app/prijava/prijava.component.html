@@ -1,0 +1,46 @@
+<body>
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title>Prijava</mat-card-title>
+        <mat-card-subtitle>Podaci za prijavu su sakriveni gumbom</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="onSubmit(formaZaPrijavu)" #formaZaPrijavu="ngForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Korisničko ime</mat-label>
+            <input matInput name="korime" type="text" ngModel required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Lozinka</mat-label>
+            <input matInput name="lozinka" type="password" ngModel required>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Prijavi me</button>
+        </form>
+        <mat-error *ngIf="errorPoruka">{{ errorPoruka }}</mat-error>
+      </mat-card-content>
+    </mat-card>
+    
+    <button mat-raised-button color="accent" (click)="toggleLoginInfo()">Prikaži podatke za prijavu</button>
+    
+    <mat-card class="login-info-card" *ngIf="showLoginInfo">
+      <mat-card-title>Podaci za prijavu:</mat-card-title>
+      <table>
+        <thead>
+          <tr>
+            <th>Korisničko ime</th>
+            <th>Lozinka</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>admin</td>
+            <td>rwa</td>
+          </tr>
+          <tr>
+            <td>obican</td>
+            <td>rwa</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card>
+  </body>

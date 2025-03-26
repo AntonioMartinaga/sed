@@ -1,0 +1,14 @@
+<body>
+<div *ngIf="korisnik">
+    <h1>Dobrodošli, {{ korisnik.ime }} {{ korisnik.prezime }}</h1>
+    <p><strong>Korisničko ime:</strong> {{ korisnik.korime }}</p>
+    <p><strong>Email:</strong> {{ korisnik.email }}</p>
+    <p><strong>Adresa:</strong> {{ korisnik.adresa }}</p>
+    <p><strong>Grad:</strong> {{ korisnik.grad }}</p>
+    <p><strong>Poštanski broj:</strong> {{ korisnik.postanskiBroj }}</p>
+  </div>
+  <div *ngIf="!korisnik">
+    <p>Molimo prijavite se kako biste vidjeli svoje podatke.</p>
+  </div>
+
+</body>

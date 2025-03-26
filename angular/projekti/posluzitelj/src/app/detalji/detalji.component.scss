@@ -1,0 +1,76 @@
+#galerijaSlika {
+    margin-top: 20px;
+  
+    .slike-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .galerija-slika {
+      width: 100px;
+      margin: 5px;
+    }
+  }
+  
+  #filmovi {
+    margin-top: 20px;
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      
+      th, td {
+        padding: 10px 20px;
+        text-align: left;
+      }
+  
+      th {
+        background-color: #f4f4f4;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+  
+      .poster-slika {
+        width: 50px;
+      }
+    }
+  }
+  
+  .gumb-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  
+  .naslov:hover {
+    cursor: pointer;
+  }
+  
+  .opis {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 1000;
+  }
+  
+  .hidden {
+    display: none;
+  }
